@@ -2,7 +2,7 @@ package br.com.valeAPena
 
 class Categoria {
 
-    String nome;
+    String nome
     
     static belongsTo = [categoriaPai:Categoria]
     
@@ -10,5 +10,10 @@ class Categoria {
     
     static constraints = {
         nome nullable:false, blank:false, maxSize:128, unique:true
+        categoriaPai nullable:true 
     }       
+    
+    String toString(){
+        this.nome
+    }
 }
